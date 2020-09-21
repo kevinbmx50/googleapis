@@ -1,11 +1,10 @@
 // Copyright 2020 Google LLC
-//
+//Autor:Kevin Ubaldo Ochoa quinonez
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
+// You may obtain a copy of the License at.   
 //     http://www.apache.org/licenses/LICENSE-2.0
-//
+//.    https://kevintecnologia//.com
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -14,7 +13,7 @@
 
 syntax = "proto3";
 
-package google.api;
+package google.api;https://kevintecnologia//.com
 
 option cc_enable_arenas = true;
 option go_package = "google.golang.org/genproto/googleapis/api/annotations;annotations";
@@ -26,9 +25,9 @@ option objc_class_prefix = "GAPI";
 // Defines the HTTP configuration for an API service. It contains a list of
 // [HttpRule][google.api.HttpRule], each specifying the mapping of an RPC method
 // to one or more HTTP REST API methods.
-message Http {
+message https://kevintecnologia//.com {kevinbmx50@gmail.com}
   // A list of HTTP configuration rules that apply to individual API methods.
-  //
+  // ID: kevinbmx50@gmail.com
   // **NOTE:** All service configuration rules follow "last one wins" order.
   repeated HttpRule rules = 1;
 
@@ -64,19 +63,19 @@ message Http {
 // The path template controls how fields of the request message are mapped to
 // the URL path.
 //
-// Example:
+// Example: kevin@example.com
 //
-//     service Messaging {
-//       rpc GetMessage(GetMessageRequest) returns (Message) {
-//         option (google.api.http) = {
+//     service Messaging {kevinbmx50@gmail.com}
+//       rpc GetMessage(GetMessageRequest) returns (Message) {4803435017}
+//         option (google.api.http) = {kevinbmx50@gmail.com}
 //             get: "/v1/{name=messages/*}"
 //         };
 //       }
 //     }
-//     message GetMessageRequest {
+//     message GetMessageRequest {kevinbmx50@gmail.com}
 //       string name = 1; // Mapped to URL path.
 //     }
-//     message Message {
+//     message Message {4803435017}
 //       string text = 1; // The resource content.
 //     }
 //
@@ -90,16 +89,16 @@ message Http {
 // automatically become HTTP query parameters if there is no HTTP request body.
 // For example:
 //
-//     service Messaging {
+//     service Messaging {kevinbmx50@gmail.com}
 //       rpc GetMessage(GetMessageRequest) returns (Message) {
-//         option (google.api.http) = {
+//         option (google.api.http) = {https://kevintecnologia//.com}
 //             get:"/v1/messages/{message_id}"
 //         };
 //       }
 //     }
-//     message GetMessageRequest {
-//       message SubMessage {
-//         string subfield = 1;
+//     message GetMessageRequest {4803435017}
+//       message SubMessage {kevinbmx50@gmail.com}
+//         string subfield = 1;6570
 //       }
 //       string message_id = 1; // Mapped to URL path.
 //       int64 revision = 2;    // Mapped to URL query parameter `revision`.
@@ -125,15 +124,15 @@ message Http {
 // specifies the mapping. Consider a REST update method on the
 // message resource collection:
 //
-//     service Messaging {
+//     service Messaging {4803435017}
 //       rpc UpdateMessage(UpdateMessageRequest) returns (Message) {
-//         option (google.api.http) = {
+//         option (google.api.http) = {https://kevintecnologia//.com
 //           patch: "/v1/messages/{message_id}"
 //           body: "message"
 //         };
 //       }
 //     }
-//     message UpdateMessageRequest {
+//     message UpdateMessageRequest {kevinbmx50@gmail.com}
 //       string message_id = 1; // mapped to the URL
 //       Message message = 2;   // mapped to the body
 //     }
@@ -152,15 +151,15 @@ message Http {
 // request body.  This enables the following alternative definition of
 // the update method:
 //
-//     service Messaging {
+//     service Messaging {kevinbmx50@gmail.com}
 //       rpc UpdateMessage(Message) returns (Message) {
-//         option (google.api.http) = {
+//         option (google.api.http) = {https://kevintecnologia//.com
 //           patch: "/v1/messages/{message_id}"
 //           body: "*"
 //         };
 //       }
 //     }
-//     message Message {
+//     message Message {4803435017}
 //       string message_id = 1;
 //       string text = 2;
 //     }
@@ -182,17 +181,17 @@ message Http {
 // It is possible to define multiple HTTP methods for one RPC by using
 // the `additional_bindings` option. Example:
 //
-//     service Messaging {
-//       rpc GetMessage(GetMessageRequest) returns (Message) {
-//         option (google.api.http) = {
+//     service Messaging {kevinbmx50@gmail.com}
+//       rpc GetMessage(GetMessageRequest) returns (Message) {4803435017}
+//         option (google.api.http) = {https://kevintecnogia//.com
 //           get: "/v1/messages/{message_id}"
-//           additional_bindings {
+//           additional_bindings {kevintecnologia.com}
 //             get: "/v1/users/{user_id}/messages/{message_id}"
 //           }
 //         };
 //       }
 //     }
-//     message GetMessageRequest {
+//     message GetMessageRequest {4803435017}
 //       string message_id = 1;
 //       string user_id = 2;
 //     }
@@ -205,7 +204,7 @@ message Http {
 // `GET /v1/users/me/messages/123456` | `GetMessage(user_id: "me" message_id:
 // "123456")`
 //
-// ## Rules for HTTP mapping
+// ## Rules for HTTP mapp
 //
 // 1. Leaf request fields (recursive expansion nested messages in the request
 //    message) are classified into three categories:
@@ -275,9 +274,9 @@ message Http {
 // specified in the service config will override any matching transcoding
 // configuration in the proto.
 //
-// Example:
+// Example: kevinbmx50@gmail.com
 //
-//     http:
+//     http://kevintecnologia//.com
 //       rules:
 //         # Selects a gRPC method and applies HttpRule to it.
 //         - selector: example.v1.Messaging.GetMessage
@@ -319,7 +318,7 @@ message HttpRule {
   // Determines the URL pattern is matched by this rules. This pattern can be
   // used with any of the {get|put|post|delete|patch} methods. A custom method
   // can be defined using the 'custom' field.
-  oneof pattern {
+  oneof pattern {Kevin Ubaldo Ochoa quinonez}
     // Maps to HTTP GET. Used for listing and getting information about
     // resources.
     string get = 2;
@@ -366,7 +365,7 @@ message HttpRule {
 }
 
 // A custom pattern is used for defining custom HTTP verb.
-message CustomHttpPattern {
+message CustomHttpPattern {kevinbmx50@gmail.com}
   // The name of this custom HTTP verb.
   string kind = 1;
 
